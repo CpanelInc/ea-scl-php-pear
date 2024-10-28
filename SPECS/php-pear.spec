@@ -19,7 +19,7 @@ Summary: PHP Extension and Application Repository framework
 Name: %{?scl}-pear
 Version: 1.10.15
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4568 for more details
-%define release_prefix 2
+%define release_prefix 3
 Release: %{release_prefix}%{?dist}.cpanel
 
 # PEAR, Archive_Tar, XML_Util are BSD
@@ -337,6 +337,9 @@ fi
 /usr/bin/%{scl}-pecl
 
 %changelog
+* Fri Oct 25 2024 Julian Brown <julian.brown@cpanel.net> - 1.10.15-3
+- ZC-12246: Correct conffiles for Ubuntu
+
 * Tue Oct 08 2024 Julian Brown <julian.brown@cpanel.net> - 1.10.15-2
 - ZC-12235: Add ea-php84
 
