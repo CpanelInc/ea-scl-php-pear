@@ -42,7 +42,7 @@ Source13: c6headers.sh
 
 Source21: Archive_Tar-1.5.0.tgz
 Source22: Console_Getopt-1.4.3.tgz
-Source23: Structures_Graph-1.1.1.tgz
+Source23: Structures_Graph-1.2.0.tgz
 Source24: XML_Util-1.4.5.tgz
 
 Source30: sanity_check.sh
@@ -73,7 +73,7 @@ Requires:  %{?scl_prefix}php-devel
 Provides:  %{?scl_prefix}php-pear(Console_Getopt) = 1.4.3
 Provides:  %{?scl_prefix}php-pear(Archive_Tar) = 1.5.0
 Provides:  %{?scl_prefix}php-pear(PEAR) = %{version}
-Provides:  %{?scl_prefix}php-pear(Structures_Graph) = 1.1.1
+Provides:  %{?scl_prefix}php-pear(Structures_Graph) = 1.2.0
 Provides:  %{?scl_prefix}php-pear(XML_Util) = 1.4.5
 
 # Require our autoconf for C6 and PHP 7.3 compat
