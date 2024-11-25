@@ -40,7 +40,7 @@ Source11: pecl.sh
 Source12: peardev.sh
 Source13: c6headers.sh
 
-Source21: Archive_Tar-1.4.14.tgz
+Source21: Archive_Tar-1.5.0.tgz
 Source22: Console_Getopt-1.4.3.tgz
 Source23: Structures_Graph-1.1.1.tgz
 Source24: XML_Util-1.4.5.tgz
@@ -71,7 +71,7 @@ Requires:  %{?scl_prefix}php-zlib
 Requires:  %{?scl_prefix}php-devel
 
 Provides:  %{?scl_prefix}php-pear(Console_Getopt) = 1.4.3
-Provides:  %{?scl_prefix}php-pear(Archive_Tar) = 1.4.14
+Provides:  %{?scl_prefix}php-pear(Archive_Tar) = 1.5.0
 Provides:  %{?scl_prefix}php-pear(PEAR) = %{version}
 Provides:  %{?scl_prefix}php-pear(Structures_Graph) = 1.1.1
 Provides:  %{?scl_prefix}php-pear(XML_Util) = 1.4.5
