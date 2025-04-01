@@ -27,11 +27,5 @@ if [ "$is_uninstall" == "yes" ]; then
     if [ -d $metadir/.registry ] ; then
         rm -rf $metadir/.registry
     fi
-
-    # Remove with EA3
-    if [ $1 -eq 0 -a -h "/usr/local/bin/pear" -a "$(readlink /usr/local/bin/pear)" = "$_bindir/pear" ]; then
-        echo "Removing pear symlink: /usr/local/bin/pear";
-        rm /usr/local/bin/pear;
-    fi
 fi
 

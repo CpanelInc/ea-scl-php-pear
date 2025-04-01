@@ -19,7 +19,7 @@ Summary: PHP Extension and Application Repository framework
 Name: %{?scl}-pear
 Version: 1.10.16
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4568 for more details
-%define release_prefix 1
+%define release_prefix 4
 Release: %{release_prefix}%{?dist}.cpanel
 
 # PEAR, Archive_Tar, XML_Util are BSD
@@ -283,22 +283,9 @@ if [ $1 -eq 2 -a "%{version}-%{release_prefix}" == "1.10.1-11" -a -s %{_scl_root
     echo -n "" >  %{_scl_root}/etc/php.d/02-pecl.ini; # preserving times does not avoid .rpmsave since those changed when data was added post-install :/
 fi
 
-# Remove with EA3
-# Stopgap measure to ensure that the cPanel interface for PEAR works
-# on new servers that never had EA3 installed.
-if [ ! -e "/usr/local/bin/pear" ]; then
-    ln -f -s %{_bindir}/pear /usr/local/bin/pear;
-fi
-
 %postun
 if [ $1 -eq 0 -a -d %{metadir}/.registry ] ; then
   rm -rf %{metadir}/.registry
-fi
-
-# Remove with EA3
-if [ $1 -eq 0 -a -h "/usr/local/bin/pear" -a "$(readlink /usr/local/bin/pear)" = "%{_bindir}/pear" ]; then
-    echo "Removing pear symlink: /usr/local/bin/pear";
-    rm /usr/local/bin/pear;
 fi
 
 %files
@@ -337,6 +324,15 @@ fi
 /usr/bin/%{scl}-pecl
 
 %changelog
+* Wed Mar 26 2025 Julian Brown <julian.brown@webpros.com> - 1.10.16-4
+- ZC-12719: Remove creation of /usr/local/bin/pear
+
+* Tue Feb 18 2025 Cory McIntire <cory.mcintire@webpros.com> - 1.10.16-3
+- ZC-12614: Rolling “ea-scl-php-pear” back to “9bf382bf95619afb4023c729d76a50e1d98ac429”: merged accidentally
+
+* Thu Feb 13 2025 Dan Muey <daniel.muey@webpros.com> - 1.10.16-2
+- ZC-12614: ZC-12614: Build 7.4 on Alma 9
+
 * Sun Nov 24 2024 Cory McIntire <cory@cpanel.net> - 1.10.16-1
 - EA-12588: Update ea-scl-php-pear from v1.10.15 to v1.10.16
 
