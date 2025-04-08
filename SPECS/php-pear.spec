@@ -19,7 +19,7 @@ Summary: PHP Extension and Application Repository framework
 Name: %{?scl}-pear
 Version: 1.10.16
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4568 for more details
-%define release_prefix 5
+%define release_prefix 4
 Release: %{release_prefix}%{?dist}.cpanel
 
 # PEAR, Archive_Tar, XML_Util are BSD
@@ -324,9 +324,6 @@ fi
 /usr/bin/%{scl}-pecl
 
 %changelog
-* Wed Apr 02 2025 Julian Brown <julian.brown@webpros.com> - 1.10.16-5
-- ZC-12156: Automate creation of *.conffiles
-
 * Wed Mar 26 2025 Julian Brown <julian.brown@webpros.com> - 1.10.16-4
 - ZC-12719: Remove creation of /usr/local/bin/pear
 
