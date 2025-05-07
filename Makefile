@@ -9,7 +9,7 @@ scl-php73-pear-obs : DISABLE_BUILD += repository=CentOS_9 repository=Almalinux_1
 scl-php72-pear-obs : DISABLE_BUILD += repository=CentOS_9 repository=Almalinux_10 repository=xUbuntu_20.04 repository=xUbuntu_22.04 repository=xUbuntu_24.04
 scl-php71-pear-obs : DISABLE_BUILD += repository=CentOS_8 repository=CentOS_9 repository=Almalinux_10 repository=xUbuntu_20.04 repository=xUbuntu_22.04 repository=xUbuntu_24.04
 scl-php70-pear-obs : DISABLE_BUILD += repository=CentOS_8 repository=CentOS_9 repository=Almalinux_10 repository=xUbuntu_20.04 repository=xUbuntu_22.04 repository=xUbuntu_24.04
-scl-php56-pear-obs : DISABLE_BUILD += repository=CentOS_8 repository=CentOS_9 repository=xUbuntu_20.04 repository=xUbuntu_22.04 repository=xUbuntu_24.04
+scl-php56-pear-obs : DISABLE_BUILD += repository=CentOS_8 repository=CentOS_9 repository=Almalinux_10 repository=xUbuntu_20.04 repository=xUbuntu_22.04 repository=xUbuntu_24.04
 scl-php55-pear-obs : DISABLE_BUILD += repository=CentOS_8 repository=CentOS_9 repository=Almalinux_10 repository=xUbuntu_20.04 repository=xUbuntu_22.04 repository=xUbuntu_24.04
 scl-php54-pear-obs : DISABLE_BUILD += repository=CentOS_8 repository=CentOS_9 repository=Almalinux_10 repository=xUbuntu_20.04 repository=xUbuntu_22.04 repository=xUbuntu_24.04
 OBS_PACKAGE := scl-php-pear
