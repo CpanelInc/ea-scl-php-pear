@@ -1,4 +1,1 @@
 %global scl ea-php85
-%global bindir /opt/cpanel/%{scl}/root/bin
-%global _bindir %{bindir}
-
