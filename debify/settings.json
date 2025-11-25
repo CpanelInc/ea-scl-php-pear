@@ -18,6 +18,7 @@
     ],
     "dont_relativise_ontar": 1,
     "adjust_install_file_src": [
-        [ "^\/var\/lib\/pear", "debian\/tmp\/var\/cpanel\/lib\/pear" ]
+        [ "^\/var\/lib\/pear", "debian\/tmp\/var\/cpanel\/lib\/pear" ],
+        [ "^\/opt\/cpanel\/(ea-php[0-9]+)\/root\/bin\/", "debian\/tmp\/opt\/cpanel\/$1\/root\/usr\/bin\/" ]
     ]
 }
