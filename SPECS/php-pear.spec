@@ -17,7 +17,7 @@
 
 Summary: PHP Extension and Application Repository framework
 Name: %{?scl}-pear
-Version: 1.10.17
+Version: 1.10.18
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4568 for more details
 %define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
@@ -324,6 +324,9 @@ fi
 /usr/bin/%{scl}-pecl
 
 %changelog
+* Sun Jan 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.10.18-1
+- EA-13326: Update ea-scl-php-pear from v1.10.17 to v1.10.18
+
 * Sun Dec 14 2025 Cory McIntire <cory.mcintire@webpros.com> - 1.10.17-1
 - EA-13290: Update ea-scl-php-pear from v1.10.16 to v1.10.17
 
