@@ -19,7 +19,7 @@ Summary: PHP Extension and Application Repository framework
 Name: %{?scl}-pear
 Version: 1.10.18
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4568 for more details
-%define release_prefix 1
+%define release_prefix 2
 Release: %{release_prefix}%{?dist}.cpanel
 
 # PEAR, Archive_Tar, XML_Util are BSD
@@ -77,7 +77,7 @@ Provides:  %{?scl_prefix}php-pear(Structures_Graph) = 1.2.0
 Provides:  %{?scl_prefix}php-pear(XML_Util) = 1.4.5
 
 # Require our autoconf for C6 and PHP 7.3 compat
-%if ( %{rhel} < 7 && ( "%{scl}" == "ea-php73" || "%{scl}" == "ea-php74" ) )
+%if ( 0%{?rhel} > 0 && 0%{?rhel} < 7 && ( "%{scl}" == "ea-php73" || "%{scl}" == "ea-php74" ) )
 Requires: autotools-latest-autoconf
 %endif
 
@@ -324,6 +324,9 @@ fi
 /usr/bin/%{scl}-pecl
 
 %changelog
+* Fri Apr 24 2026 Heekyoung Park <heekyoung.park@webpros.com> - 1.10.18-2
+- EA4-260: Build for Ubuntu 26.04
+
 * Sun Jan 25 2026 Cory McIntire <cory.mcintire@webpros.com> - 1.10.18-1
 - EA-13326: Update ea-scl-php-pear from v1.10.17 to v1.10.18
 

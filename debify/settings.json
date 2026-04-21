@@ -5,7 +5,8 @@
         "libargon2-dev",
         "libedit-dev",
         "tzdata",
-        "libedit2"
+        "libedit2",
+        ["libxml2-16", "libxml2t64", "libxml2"]
     ],
     "remove_from_requires": [
         "scl-utils-build",
