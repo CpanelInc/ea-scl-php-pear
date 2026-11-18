@@ -19,7 +19,7 @@ Summary: PHP Extension and Application Repository framework
 Name: %{?scl}-pear
 Version: 1.10.18
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4568 for more details
-%define release_prefix 2
+%define release_prefix 3
 Release: %{release_prefix}%{?dist}.cpanel
 
 # PEAR, Archive_Tar, XML_Util are BSD
@@ -324,6 +324,9 @@ fi
 /usr/bin/%{scl}-pecl
 
 %changelog
+* Thu Nov 12 2026 Julian Brown <julian.brown@webpros.com> - 1.10.18-3
+- EA4-400: Add support for ea-php86
+
 * Fri Apr 24 2026 Heekyoung Park <heekyoung.park@webpros.com> - 1.10.18-2
 - EA4-260: Build for Ubuntu 26.04
 
